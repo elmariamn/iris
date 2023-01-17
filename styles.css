@@ -1,0 +1,243 @@
+/*  
+    
+===
+
+Iris Static Profile Page.
+Copyright © 2022 Laurentia Maria (@mn-lauren).
+MIT License.
+
+===
+
+Caution:
+1. Kindly refrain from removing the content between '==='.
+2. This static page is not yet responsive.
+3. Currently best viewed via Desktop with min width 600px.
+
+Resources:
+1. Fonts by Google Fonts (https://fonts.google.com).
+2. Images created on Canva (https://www.canva.com).
+3. Icons by Font Awesome (https://fontawesome.com/icons/).
+
+Note: You can change the colors or font-family through the :root below.
+
+*/
+
+:root {
+
+    /* HEADER */
+    --main-header-family: 'League Spartan', sans-serif;
+    --main-header-size: 2rem;
+    --main-header-color: #F5F8F9;
+
+    /* BODY */
+    --main-body-family: 'Roboto', sans-serif;
+    --main-body-size: 0.75rem;
+    --main-body-color: #F5F8F9;
+    --main-bg-color: linear-gradient(45deg, #E0EBEE, #98BBC5);
+
+    /* COPYRIGHT */
+    --main-copy-size: 0.5rem;
+    --main-copy-color: #2E383B;
+    --main-icon-color: #F5F8F9;
+
+    /* BORDER & SHADOW */
+    --main-border-radius: 1rem;
+    --main-box-shadow: 3px 3px 1rem rgba(44, 44, 44, 0.3);
+
+    /* BOXES */
+    --bxs-bg-color: linear-gradient(45deg, #5B7076, #2E383B);
+    --bxs-height: 235px;
+    --bxs-width: 280px;
+    --bxs-three-width: 570px;
+
+    /* LINKS */
+    --links-bg-color: linear-gradient(45deg, #E0EBEE, #98BBC5);
+    --links-color: #2E383B;
+    --links-hover-color: #5B7076;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--main-bg-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--main-body-family);
+    font-size: var(--main-body-size);
+    color: var(--main-body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+}
+
+/* BOX CONTAINER */
+
+#box {
+    background-color: transparent;
+    border-radius: var(--main-border-radius);
+    width: 600px;
+    height: 510px;
+}
+
+.box-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
+    column-gap: calc(1.25rem / 2);
+}
+
+/* UPPER-LEFT MAIN INFO 'ONE' */
+
+#one {
+    background: var(--bxs-bg-color);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    width: var(--bxs-width);
+    height: var(--bxs-height);
+    margin: 0;
+    padding: 0;
+}
+
+#one i {
+    color: var(--main-icon-color);
+}
+
+.one-flex {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    row-gap: 0.25rem;
+}
+
+.profile {
+    width: 100px;
+    height: auto;
+    border-radius: 5rem;
+}
+
+.header {
+    font-family: var(--main-header-family);
+    font-size: var(--main-header-size);
+    color: var(--main-header-color);
+    letter-spacing: -1px;
+    line-height: 2.5rem;
+    text-transform: lowercase;
+}
+
+/* UPPER-RIGHT MAIN INFO 'TWO' */
+
+#two {
+    background: var(--bxs-bg-color);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    width: var(--bxs-width);
+    height: var(--bxs-height);
+    margin: 0;
+    padding: 0;
+}
+
+.two-flex {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: calc(1.25rem / 2);
+}
+
+/* LINKS (max. 8) */
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(1.25rem / 2);
+}
+
+.links a {
+    display: block;
+    background: var(--links-bg-color);
+    border-radius: var(--main-border-radius);
+    color: var(--links-color);
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.links a:hover {
+    color: var(--links-hover-color);
+}
+
+/* BOTTOM MAIN INFO 'THREE' */
+
+#three {
+    background: var(--bxs-bg-color);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    width: var(--bxs-three-width);
+    height: var(--bxs-height);
+    margin: 0;
+    padding: 1rem;
+}
+
+.three-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    column-gap: calc(1.25rem / 2);  
+}
+
+.banner {
+    border-radius: var(--main-border-radius);
+    width: calc((var(--bxs-three-width) - 4rem) / 2);
+}
+
+.featured {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 1rem;
+    width: calc((var(--bxs-three-width) - 4rem) / 2.5);
+}
+
+.featured a {
+    background: var(--links-bg-color);
+    border-radius: 0.5rem;
+    color: var(--links-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.featured a:hover {
+    color: var(--links-hover-color);
+}
+
+/* FOOTER */
+
+.copyright {
+    color: var(--main-copy-color);
+    font-size: var(--main-copy-size);
+    text-align: center;
+    position: relative;
+}
+
+.copyright a {
+    color: #9E7A84;
+    text-decoration: none;
+}
